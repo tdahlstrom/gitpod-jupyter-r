@@ -3,7 +3,7 @@ tasks:
     command: |
       pip install jupyter
 
-  -name: Configure Jupyter Notebook server
+  - name: Configure Jupyter Notebook server
     command: |
       python -m notebook --generate-config
       sed -i 's/# c.ServerApp.allow_remote_access = False/c.ServerApp.allow_remote_access = True/g' /home/gitpod/.jupyter/jupyter_notebook_config.py
